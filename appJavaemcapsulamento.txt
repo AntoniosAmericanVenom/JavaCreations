@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+      
+        pessoa pessoa = new pessoa();
+     //criar scanner
+     Scanner myObj = new Scanner(System.in);
+
+
+int idade = 0; 
+do{
+     System.out.println("Escreva sua idade:");
+    
+     
+     idade= myObj.nextInt();
+
+
+myObj.nextLine();
+     pessoa.setIdade(idade);
+}while(idade<0);
+
+System.out.println("Escreva seu nome:");
+String nome = myObj.nextLine();
+pessoa.setNome(nome);
+
+     
+     //input por usuário
+     System.out.println("Nome: " + pessoa.getNome());
+    System.out.println("idade: " + pessoa.getIdade());
+}
+
+}
